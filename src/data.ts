@@ -106,9 +106,83 @@ export const clubMatches:Array<IsportType>=[
         status:"finished",
         homeScore:0,
         awayScore:4,
-        matchSummary:"Get statistics for the RealMadrid Vs. Manchester United Champions league semifinal football match now.",
+        matchSummary:"Get statistics for the Real Madrid Vs. Manchester United Champions league semifinal football match now.",
         homeIcon:"/clubs/real.png",
         awayIcon:"/clubs/manu.png"
     }
     
+]
+
+export type InewsType={
+    id:number,
+    title:string,
+    category:string,
+    image:string,
+    details:string,
+    date:string,
+    author:string,
+    views:number,
+    comments:number,
+    shares:number
+    impressions:number
+    status:"Fact-Checked"|"Community-Verified"|"unverified"
+}
+export const newsList:InewsType[]=[
+    {
+        id:1,
+        title:"10 ways to reduce your office work depression.",
+        category:"Lifestyle",
+        image:"/newslist/newsList1.jpg",
+        details:"Office work depression is a common problem that affects many people. It can be caused by a variety of factors, including long hours, high stress levels, and a lack of work-life balance. In this article, we will discuss 10 ways to reduce your office work depression and improve your mental health.",
+        date:"2022-10-10",
+        author:"John Doe",
+        views:500000,
+        comments:200000,
+        shares:200000,
+        impressions:121000,
+        status:"Fact-Checked"
+    },
+    {
+        id:2,
+        title:"The benefits of regular exercise for your mental health.",
+        category:"Health Care",
+        image:"/newslist/newsList2.jpg",
+        details:"Regular exercise has many benefits for your physical health, but did you know that it can also have a positive impact on your mental health? In this article, we will discuss the benefits of regular exercise for your mental health and how you can incorporate it into your daily routine.",
+        date:"2022-10-10",
+        author:"Admin",
+        views:500000,
+        comments:200000,
+        shares:200000,
+        impressions:121000,
+        status:"Community-Verified"
+    },
+    {
+        id:3,
+        title:"The top 5 ways to improve your mental health.",
+        category:"Health Care",
+        image:"/newslist/newsList1.jpg",
+        details:"Mental health is an important aspect of overall well-being, but it is often overlooked. In this article, we will discuss the top 5 ways to improve your mental health and maintain a positive outlook on life.",
+        date:"2022-10-10",
+        author:"Jane Doe",
+        views:500000,
+        comments:200000,
+        shares:200000,
+        impressions:121000,
+        status:"Fact-Checked"
+    },
+    {
+        id:4,
+        title:"The benefits of meditation for stress relief.",
+        category:"Health Care",
+        image:"/newslist/newsList2.jpg",
+        details:"Meditation is a powerful tool for stress relief and relaxation. In this article, we will discuss the benefits of meditation for stress relief and how you can incorporate it into your daily routine to improve your mental health.",
+        date:"2022-10-10",
+        author:"Admin",
+        views:500000,
+        comments:200000,
+        shares:200000,
+        impressions:121000,
+        status:"Community-Verified"
+    },
+
 ]
