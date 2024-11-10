@@ -46,11 +46,8 @@ export default function MainLayout({
           <TopSearchBar />
         </div>
         <div className="w-full   grid grid-cols-subgrid col-[1/11]">
-          <div className="w-full col-[1/8]  py-0 ">{children}</div>
-          <aside className="max-w-[300px] col-[8/11]  py-0 ">
-            <NewsBar />
-            
-          </aside>
+         {children}
+         
         </div>
       </div>
       </div>

@@ -1,3 +1,4 @@
+import NewsBar from "@/components/NewsBar";
 import { InewsType, newsList } from "@/data";
 import { Calendar, Eye, MessageCircle, Share2, TrendingUp } from "lucide-react";
 import Image from "next/image";
@@ -8,6 +9,8 @@ const Dashboard = () => {
   const newsCategory = "Todays";
 
   return (
+    <>
+     <div className="w-full col-[1/8]  py-0 ">
     <div className="px-3 ">
       <div className="">
         <h3 className={` font-medium font-outfit text-xl  mb-3`}>
@@ -19,6 +22,12 @@ const Dashboard = () => {
         <TrendingNews />
       </div>
     </div>
+     </div>
+    <aside className="max-w-[300px] col-[8/11]  py-0 ">
+            <NewsBar />
+            
+          </aside>
+    </>
   );
 };
 
