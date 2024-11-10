@@ -35,7 +35,7 @@ const Sidebar = () => {
       <div className="search px-3 mb-3">
         <SideBarSearch />
       </div>
-      <div className="menu w-full mb-14">
+      <div className="menu w-full mb-11">
         <Menus />
       </div>
       <div className="Category mb-3">
@@ -52,19 +52,19 @@ export default Sidebar;
 
 const ProfileSummary = () => {
   return (
-    <div className="w-64 h-20 py-2 flex-col justify-end items-end inline-flex">
-    <div className="self-stretch px-6 py-3 rounded justify-between items-center inline-flex">
-      <div className="justify-start items-center gap-3 flex">
-        <div className="w-10 h-10 relative">
-          <img className="w-10 h-10 left-0 top-0 absolute rounded-full border border-white" src="https://via.placeholder.com/40x40" />
-          <div className="w-2.5 h-2.5 left-[30px] top-[28px] absolute bg-[#037f2d] rounded-lg border border-white"></div>
+    <div className="w-full h-20 py-2 px-1 flex-col justify-end items-end inline-flex">
+    <div className="self-stretch px-0 py-3 rounded justify-between items-center inline-flex">
+      <div className="justify-start items-center gap-2.5 flex">
+        <div className="size-8 relative">
+          <img className="size-8 left-0 top-0 absolute rounded-full border border-white" src="https://via.placeholder.com/40x40" />
+          <div className="w-2.5 h-2.5 left-[22px] top-[24px] absolute bg-[#037f2d] rounded-lg border border-white"></div>
         </div>
         <div className="flex-col justify-start items-start inline-flex">
-          <div className="w-32 text-[#101828] text-sm font-semibold font-['Inter'] leading-tight">Alison Eyo</div>
-          <div className="w-32 text-[#475267] text-sm font-normal font-['Inter'] leading-tight">alison.e@rayna.ui</div>
+          <div className=" text-[#101828] text-xs font-semibold font-inter leading-tight">Alison Eyo</div>
+          <div className=" text-[#475267] text-xs font-normal font-inter leading-tight">alison.e@rayna.ui</div>
         </div>
       </div>
-      <LogIn className=" " size={20} />
+      <LogIn className=" shrink-0" size={20} />
     </div>
   </div>
   );
@@ -72,7 +72,7 @@ const ProfileSummary = () => {
 
 const Categories = () => {
   return (
-    <div className="w-64   pb-3 flex-col justify-start items-start gap-3 inline-flex">
+    <div className="w-full   pb-3 flex-col justify-start items-start gap-3 inline-flex">
       <div className="self-stretch pl-3 pr-4 justify-start items-center gap-2.5 inline-flex">
         <div className="grow shrink basis-0 text-[#98a1b2] text-sm font-medium  leading-tight">
           Category
@@ -102,9 +102,9 @@ const CategoryTab = ({
   isActive: Boolean;
 }) => {
   return (
-    <div className="self-stretch h-[44px]  px-4 py-3 rounded justify-start items-center gap-1 inline-flex">
+    <div className="self-stretch   px-4 py-2 rounded justify-start items-center gap-1 inline-flex">
       <div className="grow shrink basis-0  justify-start items-start gap-3 flex">
-        <div className="grow shrink basis-0 text-[#344054] text-sm font-normal  leading-tight">
+        <div className="grow shrink basis-0 text-[#344054] text-xs font-normal  leading-tight">
           {name}
         </div>
       </div>
@@ -129,14 +129,14 @@ const CategoryTab = ({
 
 const Menus = () => {
   return (
-    <div className="w-full  h-[281px]  flex-col justify-start items-start gap-3 inline-flex">
+    <div className="w-full    flex-col justify-start items-start gap-3 inline-flex">
       <div className="self-stretch pl-3 pr-4 justify-start items-center gap-2.5 inline-flex">
         <div className="grow shrink basis-0 text-[#98a1b2] text-sm font-medium  leading-tight">
           Menu
         </div>
         <Minus className="text-gray-500" />
       </div>
-      <div className="self-stretch w-[256px]  flex-col justify-start items-center gap-1 flex">
+      <div className="self-stretch  w-full  flex-col justify-start items-center gap-1 flex">
         {datas.nav.map((item, index) => (
           <NavTab isActive={index == 0} key={index} {...item} />
         ))}
@@ -158,15 +158,15 @@ const NavTab = ({
   return (
     <div
       className={clsx(
-        "self-stretch h-[44px]  px-4 py-3 rounded justify-start items-center gap-1 inline-flex",
+        "self-stretch h-[38px] font-inter  px-4 py-3 rounded justify-start items-center gap-1 inline-flex",
         {
           "bg-[#e9e7fd]": isActive,
         }
       )}
     >
-      <div className="grow shrink basis-0 h-5 justify-start items-start gap-3 flex">
-        <Hash size={20} />
-        <div className="grow shrink basis-0 text-[#344054] text-sm font-normal  leading-tight">
+      <div className="grow shrink basis-0 h-5 justify-start items-start gap-2 flex">
+        <Hash strokeWidth={2} size={16} />
+        <div className="grow shrink basis-0 text-[#344054] text-xs font-normal  leading-tight">
           {name}
         </div>
       </div>

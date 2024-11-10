@@ -34,23 +34,25 @@ export default function MainLayout({
         inter.variable,
         outfit.variable,
         poppins.variable,
-        "flex font-sans min-h-screen max-w-screen bg-background"
+        " font-sans  min-h-screen max-w-screen bg-background"
       )}
     >
-      <aside className="w-[272px]  bg-white px-2 py-6 ">
+      <div className="grid grid-cols-12 w-full">
+      <aside className="col-[1/3]  bg-white px-2 py-6 ">
         <Sidebar />
       </aside>
-      <div className="w-full mt-5 pr-[20px]  overflow-hidden place-items-center">
-        <div className=" pr-[150px]">
+      <div className="w-full  col-[3/13] grid grid-cols-subgrid  mt-5 pr-[20px]  overflow-hidden place-items-center">
+        <div className=" pr-[150px] col-[1/11]  ">
           <TopSearchBar />
         </div>
-        <div className="w-full flex">
-          <div className="w-full">{children}</div>
-          <aside className="max-w-[300px]  py-6 ">
+        <div className="w-full   grid grid-cols-subgrid col-[1/11]">
+          <div className="w-full col-[1/8]  py-0 ">{children}</div>
+          <aside className="max-w-[300px] col-[8/11]  py-0 ">
             <NewsBar />
             
           </aside>
         </div>
+      </div>
       </div>
     </main>
   );

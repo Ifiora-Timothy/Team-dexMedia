@@ -10,11 +10,11 @@ const NewsBar = () => {
   
   return (
     <div className={clsx( " font-poppins w-full")}>
-      <h3 className={` font-medium font-outfit text-2xl`}>
+      <h3 className={` font-medium font-outfit text-xl`}>
         <span className="font-bold">{newsCategory}</span> News
       </h3>
       {/* all news */}
-      <div className="w-full flex mt-3 mb-5 flex-col gap-3">
+      <div className="w-full flex mt-3 mb-3 flex-col gap-3">
         {clubMatches.map((news, index) => (
           <div className="w-full">
             <SportsCard matchData={news} key={news.id} />

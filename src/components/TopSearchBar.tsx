@@ -26,8 +26,8 @@ const TopSearchBar = () => {
           pr-10
           pl-4
           py-2
-          rounded-[20px]
-         w-[600px]
+          rounded-[14px]
+         w-[720px]
 
           outline-none
           transition-colors
