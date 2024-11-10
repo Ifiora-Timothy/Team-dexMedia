@@ -16,7 +16,7 @@ const Sidebar = () => {
         <div
           className={cn(
             outfit.className,
-            "Logo flex items-center justify-center"
+            "Logo flex items-center px-3 justify-start"
           )}
         >
           <div className="w-7 h-7 px-[5.89px] py-[6.63px] bg-[#473bf0]/10 rounded-[14px] flex-col justify-center items-center gap-[7.37px] inline-flex">
@@ -32,7 +32,7 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-      <div className="search mb-3">
+      <div className="search px-3 mb-3">
         <SideBarSearch />
       </div>
       <div className="menu w-full mb-14">
