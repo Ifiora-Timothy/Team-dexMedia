@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 };
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ["latin","latin-ext"],
   variable: '--font-inter',
 });
 const outfit = Outfit({
-  subsets: ["latin"],
+  subsets: ["latin","latin-ext"],
   variable: '--font-outfit',
 });
 const poppins = Poppins({
-    weight: [ "500", "600"],
-  subsets: ["latin"],
+    weight: ["300","400", "500", "600"],
+  subsets: ["latin","latin-ext"],
   variable: '--font-poppins',
 });
 export default function MainLayout({

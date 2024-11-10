@@ -1,6 +1,7 @@
 import { InewsType, newsList } from "@/data";
 import { Calendar, Eye, MessageCircle, Share2, TrendingUp } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Dashboard = () => {
@@ -141,7 +142,7 @@ const NewsCard = ({
 const HeadLineCard = () => {
   return (
     <div className="h-96 w-full bg-white rounded-3xl flex-col justify-end items-start inline-flex">
-      <div className="self-stretch h-96 relative rounded-2xl border border-[#e7e8ec]">
+      <Link href={`/dashboard/1w21`} className="self-stretch h-96 relative rounded-2xl border border-[#e7e8ec]">
         <div
           style={{
             background:
@@ -156,7 +157,7 @@ const HeadLineCard = () => {
           layout="fill"
           objectFit="cover"
         />
-      </div>
+      </Link>
       <div className="self-stretch  h-28 p-5 bg-white rounded-2xl flex-col justify-start items-start gap-3.5 flex">
         <div className="self-stretch justify-start items-center gap-3.5 inline-flex">
           <div className="px-2.5 py-1.5 bg-[#9672ff]/20 rounded-3xl justify-start items-center gap-2.5 flex">
@@ -191,7 +192,7 @@ const HeadLineCard = () => {
             </div>
           </div>
         </div>
-        <div className="self-stretch text-black text-xl font-semibold font-['Poppins'] leading-loose">
+        <div className="self-stretch text-black text-lg font-semibold font-poppins leading-loose">
           10 ways to reduce your office work depression.
         </div>
       </div>
