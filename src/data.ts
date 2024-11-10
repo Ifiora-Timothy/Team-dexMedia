@@ -98,7 +98,7 @@ export const clubMatches:Array<IsportType>=[
      },
     {
         id:2,
-        home:"RealMadrid",
+        home:"Real Madrid",
         away:"Manchester United",
         date:"2022-10-10",
         time:"12:00",

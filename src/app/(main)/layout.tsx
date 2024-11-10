@@ -41,7 +41,7 @@ export default function MainLayout({
         <Sidebar />
       </aside>
       <div className="w-full mt-5 pr-[20px]  overflow-hidden place-items-center">
-        <div className="">
+        <div className=" pr-[150px]">
           <TopSearchBar />
         </div>
         <div className="w-full flex">
