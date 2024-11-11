@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { InewsType, newsList } from "@/data";
 import clsx from "clsx";
 import { Calendar, Eye, MessageCircle, Share2, TrendingUp } from "lucide-react";
@@ -7,30 +7,35 @@ import React, { useEffect, useRef, useState } from "react";
 
 const Dashboard = () => {
   const newsCategory = "Todays";
-  const firstColumnRef = useRef<HTMLDivElement>(null)
-  const secondColumnRef = useRef<HTMLDivElement>(null)
-  const [firstColumnHeight, setFirstColumnHeight] = useState<number | null>(null)
+  const firstColumnRef = useRef<HTMLDivElement>(null);
+  const secondColumnRef = useRef<HTMLDivElement>(null);
+  const [firstColumnHeight, setFirstColumnHeight] = useState<number | null>(
+    null
+  );
 
   useEffect(() => {
     const updateHeight = () => {
       if (firstColumnRef.current && secondColumnRef.current) {
-        const height = firstColumnRef.current.offsetHeight
-        setFirstColumnHeight(height - 60)
-        secondColumnRef.current.style.maxHeight = `${height}px`
+        const height = firstColumnRef.current.offsetHeight;
+        setFirstColumnHeight(height - 60);
+        secondColumnRef.current.style.maxHeight = `${height}px`;
       }
-    }
+    };
 
-    updateHeight()
-    window.addEventListener('resize', updateHeight)
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
 
     return () => {
-      window.removeEventListener('resize', updateHeight)
-    }
-  }, [])
+      window.removeEventListener("resize", updateHeight);
+    };
+  }, []);
 
   return (
     <>
-      <div ref={firstColumnRef} className="w-full col-[1/8] h-fit overflow-hidden py-0 mt-5 ">
+      <div
+        ref={firstColumnRef}
+        className="w-full col-[1/8] h-fit overflow-hidden py-0 mt-5 "
+      >
         <div className="px-3 h-fit">
           <div className="">
             <HeadLineCard />
@@ -40,9 +45,10 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <aside  ref={secondColumnRef} 
-
-      className="max-w-[300px]    col-[8/11] overflow-hidden mt-4 py-0 ">
+      <aside
+        ref={secondColumnRef}
+        className="max-w-[300px]    col-[8/11] overflow-hidden mt-4 py-0 "
+      >
         <NewsBar firstColumnHeight={firstColumnHeight} ref={secondColumnRef} />
       </aside>
     </>
@@ -177,9 +183,12 @@ const HeadLineCard = () => {
   );
 };
 
-const NewsBar = ({ref,firstColumnHeight}:{
-    ref: React.RefObject<HTMLDivElement>
-    firstColumnHeight: number | null
+const NewsBar = ({
+  ref,
+  firstColumnHeight,
+}: {
+  ref: React.RefObject<HTMLDivElement>;
+  firstColumnHeight: number | null;
 }) => {
   const newsCategory = "Related";
 
@@ -189,16 +198,21 @@ const NewsBar = ({ref,firstColumnHeight}:{
         <span className="font-bold">{newsCategory}</span> News
       </h3>
 
-      <div ref={ref}        style={{ maxHeight: firstColumnHeight ? `${firstColumnHeight}px` : '100%',
-    // change the scrollbar width and reduce height
-    scrollbarWidth: 'thin',
+      <div
+        ref={ref}
+        style={{
+          maxHeight: firstColumnHeight ? `${firstColumnHeight}px` : "100%",
+          // change the scrollbar width and reduce height
+          scrollbarWidth: "thin",
 
-    scrollbarColor: '#d4d6db transparent',
-    // dont show the arrows at the top and bottom of scroll bar
-    msScrollbarTrackColor: 'transparent',
-    }} className="w-full overflow-y-auto pr-1  flex mt-3 mb-3 flex-col gap-3">
+          scrollbarColor: "#d4d6db transparent",
+          // dont show the arrows at the top and bottom of scroll bar
+          msScrollbarTrackColor: "transparent",
+        }}
+        className="w-full overflow-y-auto pr-1  flex mt-3 mb-3 flex-col gap-3"
+      >
         {newsList.map((news, index) => (
-          <div  key={news.id} className="w-full">
+          <div key={news.id} className="w-full">
             <RelatedNewsCard newsData={news} />
           </div>
         ))}
@@ -211,22 +225,22 @@ const RelatedNewsCard = ({ newsData }: { newsData: InewsType }) => {
   return (
     <div className="px-3 py-3.5 bg-white rounded-2xl flex-col justify-start items-start gap-1 inline-flex">
       <div className="self-stretch flex-col justify-center items-start gap-5 flex">
-      <div className="self-stretch h-[120px] relative rounded-2xl border border-[#e7e8ec]">
-        <div
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 65.77%)",
-          }}
-          className="rounded-2xl absolute z-10   h-full w-full"
-        ></div>
-        <Image
-          alt="headline"
-          className="rounded-2xl"
-          src="/newslist/newsList1.jpg"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
+        <div className="self-stretch h-[120px] relative rounded-2xl border border-[#e7e8ec]">
+          <div
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 65.77%)",
+            }}
+            className="rounded-2xl absolute z-10   h-full w-full"
+          ></div>
+          <Image
+            alt="headline"
+            className="rounded-2xl"
+            src="/newslist/newsList1.jpg"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
         <div className="self-stretch h-20 flex-col justify-start items-start gap-2.5 flex">
           <div className="self-stretch justify-start items-center gap-3.5 inline-flex">
             <div className="px-2.5 py-1.5 bg-violet-500/20 rounded-3xl justify-start items-center gap-2.5 flex">
@@ -244,7 +258,7 @@ const RelatedNewsCard = ({ newsData }: { newsData: InewsType }) => {
             </div>
           </div>
           <div className="self-stretch text-black text-sm font-semibold font-poppins leading-tight">
-          {newsData.title}
+            {newsData.title}
           </div>
         </div>
       </div>
