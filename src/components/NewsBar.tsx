@@ -1,9 +1,7 @@
 import { clubMatches } from "@/data";
 import clsx from "clsx";
-import { Outfit, Poppins } from "next/font/google";
 import React from "react";
 import SportsCard from "./SportsCard";
-import { ImageIcon, MoveDiagonal, Send, Video } from "lucide-react";
 import CreateNewsCard from "./NewsCard";
 
 const NewsBar = () => {
@@ -17,7 +15,7 @@ const NewsBar = () => {
       {/* all news */}
       <div className="w-full flex mt-3 mb-3 flex-col gap-3">
         {clubMatches.map((news, index) => (
-          <div className="w-full">
+          <div key={index} className="w-full">
             <SportsCard matchData={news} key={news.id} />
           </div>
         ))}

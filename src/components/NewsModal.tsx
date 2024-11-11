@@ -1,4 +1,4 @@
-import { Expand, Image, Send, Video } from "lucide-react";
+import { Expand, Send, Video } from "lucide-react";
 import React from "react";
 
 const NewsModal = ({

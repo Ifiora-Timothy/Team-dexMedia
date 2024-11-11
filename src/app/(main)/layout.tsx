@@ -1,4 +1,4 @@
-import NewsBar from "@/components/NewsBar";
+
 import Sidebar from "@/components/sidebar";
 import TopSearchBar from "@/components/TopSearchBar";
 import { cn } from "@/lib/utils";

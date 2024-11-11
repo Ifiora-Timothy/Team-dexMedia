@@ -1,12 +1,11 @@
 "use client";
 import { InewsType, newsList } from "@/data";
 import clsx from "clsx";
-import { Calendar, Eye, MessageCircle, Share2, TrendingUp } from "lucide-react";
+import {  Eye, MessageCircle, Share2, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 const Dashboard = () => {
-  const newsCategory = "Todays";
   const firstColumnRef = useRef<HTMLDivElement>(null);
   const secondColumnRef = useRef<HTMLDivElement>(null);
   const [firstColumnHeight, setFirstColumnHeight] = useState<number | null>(

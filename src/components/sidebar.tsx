@@ -99,7 +99,7 @@ const CategoryTab = ({
 }: {
   name: string;
   waiting: number;
-  isActive: Boolean;
+  isActive: boolean;
 }) => {
   return (
     <div className="self-stretch   px-4 py-2 rounded justify-start items-center gap-1 inline-flex">
@@ -153,7 +153,7 @@ const NavTab = ({
 }: {
   name: string;
   waiting: number;
-  isActive: Boolean;
+  isActive: boolean;
 }) => {
   return (
     <div
