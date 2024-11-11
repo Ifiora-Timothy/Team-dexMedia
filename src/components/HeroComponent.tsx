@@ -87,7 +87,7 @@ const HeroComponent = () => {
                 <Link
                   className="text-white text-[13px] font-semibold tracking-wide "
                   key={index}
-                  href=""
+                  href={"/dashboard"}
                 >
                   {item}
                 </Link>
