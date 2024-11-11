@@ -19,14 +19,14 @@ const Sidebar = () => {
             "Logo flex items-center px-3 justify-start"
           )}
         >
-          <div className="w-7 h-7 px-[5.89px] py-[6.63px] bg-[#473bf0]/10 rounded-[14px] flex-col justify-center items-center gap-[7.37px] inline-flex">
+          <div className="size-6 px-[5.89px] py-[6.63px] bg-[#473bf0]/10 rounded-[14px] flex-col justify-center items-center gap-[7.37px] inline-flex">
             <DexMediaIcon />
           </div>
           <div>
-            <span className="text-[#b5b0ff] text-2xl font-semibold  leading-tight">
+            <span className="text-[#b5b0ff] text-xl font-semibold  leading-tight">
               Dex
             </span>
-            <span className="text-[#473bf0] text-2xl font-semibold  leading-tight">
+            <span className="text-[#473bf0] text-xl font-semibold  leading-tight">
               Media
             </span>
           </div>

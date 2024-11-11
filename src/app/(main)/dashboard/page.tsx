@@ -39,7 +39,14 @@ const TrendingNews = () => {
       <h3 className={` font-medium font-outfit text-xl  mb-3`}>
         <span className="font-bold">Trending</span> News
       </h3>
-      <div className="w-full overflow-auto ">
+      <div style={{
+        // change the scrollbar width and reduce height
+          scrollbarWidth: "thin",
+
+          scrollbarColor: "#d4d6db transparent",
+          // dont show the arrows at the top and bottom of scroll bar
+          msScrollbarTrackColor: "transparent",
+        }} className="w-full overflow-auto ">
         <div className="grid grid-flow-col gap-4 auto-cols-[calc(100%/2.25)]">
         {/* Each card */}
        
