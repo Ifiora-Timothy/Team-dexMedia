@@ -187,3 +187,21 @@ export const newsList:InewsType[]=[
 
 ]
 
+export const HIWs=[
+    
+        {
+            title:"Content Submission",
+            details:'Wonder twenty hunted and put income set desire expect. Am cottage calling.'
+
+        },
+        {
+            title:"Community Verification",
+            details:"Conveying or northward offending admitting perfectly my. Colonel gravit and moonlight."
+        },
+        {
+            title:"Token Rewards",
+            details:"Moderate children at of outweigh it. Unsatiable it considered invitation he travelling insensible."
+        }
+    
+]
+

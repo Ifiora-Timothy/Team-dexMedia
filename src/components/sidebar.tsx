@@ -181,7 +181,9 @@ const NavTab = ({
   );
 };
 
-export const DexMediaIcon = () => {
+export const DexMediaIcon = ({stroke="#473BF0"}:{
+  stroke?:string
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +193,7 @@ export const DexMediaIcon = () => {
       viewBox="0 0 18 14"
     >
       <path
-        stroke="#473BF0"
+        stroke={stroke}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
