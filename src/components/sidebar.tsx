@@ -5,6 +5,7 @@ import SideBarSearch from "./SideBarSearch";
 import { Hash, LogIn, Minus } from "lucide-react";
 import { datas } from "@/data";
 import clsx from "clsx";
+import Link from "next/link";
 const outfit = Outfit({
   weight: "600",
   subsets: ["latin"],
@@ -13,7 +14,7 @@ const Sidebar = () => {
   return (
     <div className="w-full">
       <div className="header font-sans  mb-3">
-        <div
+        <Link href="/"
           className={cn(
             outfit.className,
             "Logo flex items-center px-3 justify-start"
@@ -30,7 +31,7 @@ const Sidebar = () => {
               Media
             </span>
           </div>
-        </div>
+        </Link>
       </div>
       <div className="search px-3 mb-3">
         <SideBarSearch />
