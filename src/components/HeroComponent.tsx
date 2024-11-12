@@ -1,5 +1,5 @@
 import { DexMediaIcon } from "@/components/sidebar";
-import clsx from "clsx";
+
 import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

@@ -210,7 +210,7 @@ const NewsBar = ({
         }}
         className="w-full overflow-y-auto pr-1  flex mt-3 mb-3 flex-col gap-3"
       >
-        {newsList.map((news, index) => (
+        {newsList.map((news) => (
           <div key={news.id} className="w-full">
             <RelatedNewsCard newsData={news} />
           </div>
