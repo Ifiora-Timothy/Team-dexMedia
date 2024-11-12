@@ -1,9 +1,8 @@
 "use client";
 import { ImageIcon, MoveDiagonal, Send, Video } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import NewsModal from "./NewsModal";
 import { usePostCanister } from "@/hooks/usePostCannister";
-import { Post } from "@/types/post.types";
 
 export default function CreateNewsCard() {
   const modalRef = useRef<HTMLDialogElement>(null);

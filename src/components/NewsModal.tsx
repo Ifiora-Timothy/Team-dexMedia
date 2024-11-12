@@ -1,7 +1,6 @@
 import { Expand, Send, Video } from "lucide-react";
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useEffect } from "react";
 import { usePostCanister } from "@/hooks/usePostCannister";
-import { Post } from "@/types/post.types";
 import React from "react";
 import Form from "next/form"
 
