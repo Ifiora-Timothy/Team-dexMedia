@@ -3,6 +3,7 @@ import { DexMediaIcon } from "@/components/sidebar";
 import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import ConnectWallet from "./ConnectWallet";
 
 const HeroComponent = () => {
     return (
@@ -96,9 +97,7 @@ const HeroComponent = () => {
           </div>
           <div className="   justify-end items-center gap-1 flex">
             <div className="px-7 py-4 bg-zinc-100/5 rounded-3xl border border-white/20 justify-center items-center gap-2.5 flex">
-              <div className="text-white text-sm font-semibold font-outfit leading-tight">
-                Connect Wallet
-              </div>
+             <ConnectWallet/>
             </div>
           </div>
         </div>

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Inter, Outfit, Poppins } from "next/font/google";
+import { ICProvider } from "@/providers/ICprovider";
+import { Toaster } from "sonner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,11 +27,11 @@ const inter = Inter({
 });
 const outfit = Outfit({
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600","700","800","900"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-outfit",
 });
 const poppins = Poppins({
-  weight: ["300", "400", "500", "600","700"],
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin", "latin-ext"],
   variable: "--font-poppins",
 });
@@ -43,7 +45,8 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} ${inter.variable} ${poppins.variable} ${geistSans.variable} ${geistMono.variable} antialiased `}
       >
-        {children}
+        <ICProvider>{children}</ICProvider>
+        <Toaster/>
       </body>
     </html>
   );
