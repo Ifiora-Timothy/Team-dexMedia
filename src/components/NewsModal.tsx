@@ -62,8 +62,12 @@ const NewsModal = ({
       console.log({ newPostId });
 
       return { data: null, errors: {} };
-    } catch (err: any) {
-      errors.random = err.message;
+    } catch (err: unknown) {
+      if (err instanceof Error) { // Type narrowing
+        errors.random = err.message;
+      } else {
+        errors.random = String(err); // Fallback for non-Error types
+      }
       return { data: null, errors };
     }
   }

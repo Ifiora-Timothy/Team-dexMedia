@@ -79,7 +79,7 @@ export function ICProvider({children}:PropsWithChildren) {
     };
   
     // Create agent and actor instances for interacting with canisters
-    const createActor = (canisterId: string, idlFactory: IDL.InterfaceFactory):ActorSubclass<any> | null => {
+    const createActor = <T,>(canisterId: string, idlFactory: IDL.InterfaceFactory): ActorSubclass<T> | null => {
       if (!identity) return null;
   
       const agent = new HttpAgent({
@@ -91,7 +91,7 @@ export function ICProvider({children}:PropsWithChildren) {
       // if (process.env.NODE_ENV !== "production") {
       //   agent.fetchRootKey().catch(console.error);
       // }
-  
+ 
       return Actor.createActor(idlFactory, {
         agent,
         canisterId,
